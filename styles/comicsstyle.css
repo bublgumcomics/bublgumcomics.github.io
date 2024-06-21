@@ -41,9 +41,8 @@ body {
 }
 
 .logo {
-    width: 40%;
+    width: 50%;
     height: auto;
-    margin-bottom: 20px;
 }
 
 .comic {
@@ -56,10 +55,18 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
+    overflow-x: auto; /* Allows horizontal scrolling */
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-inner {
     display: flex;
     justify-content: center;
     padding: 10px;
-    z-index: 1;
+    width: max-content; /* Ensure the content width expands to fit the buttons */
 }
 
 .navbar button {
@@ -74,9 +81,9 @@ body {
     cursor: pointer;
     border-radius: 20px;
     box-shadow: 0px 0px 20px rgba(36, 36, 36, 0.4);
-    transition: background-color 0.3s;
-    transition: box-shadow 0.3s ease; 
+    transition: background-color 0.3s, box-shadow 0.3s ease;
     margin: 0 10px;
+    white-space: nowrap; /* Prevent buttons from wrapping to a new line */
 }
 
 .navbar button:hover {
@@ -84,9 +91,28 @@ body {
     background-color: #000;
     color: #fff;
 }
+
 .navbar button:active {
     background-color: #404040;
 }
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    .navbar {
+        justify-content: flex-start; /* Align items to the start for better scroll */
+    }
+
+    .navbar-inner {
+        justify-content: flex-start; /* Align items to the start for better scroll */
+        padding: 10px 5px; /* Reduce padding for smaller screens */
+    }
+
+    .navbar button {
+        margin: 0 5px; /* Reduce margin for smaller screens */
+        padding: 10px 15px; /* Reduce padding for smaller screens */
+        font-size: 14px; /* Reduce font size for smaller screens */
+    }
+}   
 
 .navbar-bottom {
     position: fixed;
