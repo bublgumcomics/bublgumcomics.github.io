@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOCIALS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/styles/contactstyle.css">
+</head>
+<body>
+    <div class="navbar">
+        <button onclick="window.location.href='index.html'">Home</button>
+        <button onclick="window.location.href='comics.html'">Comics</button>
+        <button onclick="window.location.href='wip.html'">Store</button>
+        <button onclick="window.location.href='about.html'">About</button>
+        <button onclick="window.location.href='socials.html'">Socials</button>
+    </div>
+    <div class="background"></div>
+    <div class="overlay">
+        <img class="logo" src="/images/MEARL4.png" alt="Logo">
+        <div class="content">
+
+            <section id="social-media">
+                <h1>CHECK OUT OUR (COMING SOON) SOCIALS</h1>
+                <div class="social-buttons">
+                    <a href="https://youtube.com" target="_blank" class="social-button youtube">
+                        <i class="fab fa-youtube"></i> Youtube
+                    </a>
+                    <a href="https://instagram.com" target="_blank" class="social-button instagram">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                    <a href="https://x.com" target="_blank" class="social-button twitter">
+                        <i class="fab fa-twitter"></i> Twitter / X
+                    </a>
+                </div>
+            </section>
+
+            <section id="contact-form">
+                <h2>CONTACT US</h2>
+                <form action="https://api.web3forms.com/submit" method="post">
+                    <input type="hidden" name="access_key" value="4a33d3be-1afe-4ce3-95ed-f3902c646689">
+
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <input type="submit" value="Send Message">
+                </form>
+            </section>
+        </div>
+    </div>
+    <p>&copy; BUBLGUM 2024</p>
+</body>
+</html>
