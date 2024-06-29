@@ -133,8 +133,7 @@ body {
     background: rgb(249,206,52);
     background: linear-gradient(142deg, rgba(249,206,52,1) 0%, rgba(238,42,123,1) 44%, rgba(98,40,215,1) 100%);
 }
-.twitter { background-color: #000; }
-.linkedin { background-color: #0077b5; }
+.webtoon{ background-color: #00dc64; }
 
 .social-button:hover {
     opacity: 0.8;

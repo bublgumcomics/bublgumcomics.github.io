@@ -41,8 +41,9 @@ body {
 }
 
 .logo {
-    width: 50%;
+    width: 40%;
     height: auto;
+    text-align: center;
 }
 
 .comic {
@@ -167,4 +168,50 @@ body {
     color: black;
     margin: 20px auto;
     width: 90%;
+}
+
+.content2 {
+    display: flex;
+    justify-content: center; /* Center align horizontally */
+    align-items: center; /* Center align vertically */
+    flex-wrap: wrap; /* Allow content to wrap if needed */
+    padding: 20px;
+    margin-top: 40px;
+    max-width: 800px;
+    width: 100%; /* Ensure full width responsiveness */
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    box-shadow: 0 0px 20px #000;
+}
+
+.gif-container {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+.gif-container img {
+    width: 100%; /* Make the image fill the container width */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 400px; /* Adjust maximum height as needed */
+    display: block; /* Ensure image is centered horizontally */
+    margin: 0 auto;
+}
+
+.about-section {
+    flex: 1;
+    padding: 20px;
+    max-width: 100%;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.about-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
 }
