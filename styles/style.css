@@ -53,7 +53,7 @@ body {
     top: 0;
     width: 100%;
     overflow-x: auto; /* Allows horizontal scrolling */
-    z-index: 1;
+    z-index: 0;
     background-color: rgba(255, 255, 255, 0.8);
     display: flex;
     justify-content: center;
@@ -195,10 +195,10 @@ button:hover {
 .content {
     padding: 20px;
     text-align:center;
-    margin-bottom: auto;
     background-color: rgba(255, 255, 255, 0.4);
     border-radius: 10px;
     box-shadow: 0 0px 20px #000;
+    margin-bottom: 20px;
 }
 
 .faq-section {
@@ -252,3 +252,4 @@ button:hover {
     flex-direction: column;
     align-items: center;
 }
+
