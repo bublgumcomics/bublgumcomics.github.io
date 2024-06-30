@@ -150,8 +150,8 @@ body {
     display: flex;
     font-family: "Fredoka", sans-serif;
     border: none;
-    background-color: #ff7db4;
-    color: #000;
+    background-color: #000;
+    color: #fff;
     padding: 10px 20px;
     text-align: center;
     font-size: 16px;
@@ -165,8 +165,8 @@ body {
 
 .navbar-bottom button:hover {
     box-shadow: 6px 6px 6px rgba(36, 36, 36, 0.6);
-    background-color: #000;
-    color: #fff;
+    background-color: #fff;
+    color: #000;
 }
 .navbar-bottom button:active {
     background-color: #404040;
@@ -237,3 +237,77 @@ body {
     line-height: 1.6;
     color: #666;
 }
+
+/* Popup styling */
+/* Styles for tag popup */
+.tags-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: (0, 0, 0, 0.8); /* Dark semi-transparent background */
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    display: none;
+}
+
+.tags-popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    max-height: 300px; /* Maximum height of the popup content */
+    overflow-y: auto; /* Enable vertical scroll */
+    text-align: center;
+    position: relative; /* Ensure relative positioning for absolute child */
+}
+
+.close-btn {
+    color: black;
+    position: absolute;
+    top: 0px; /* Adjust top position as needed */
+    right: 10px; /* Adjust right position as needed */
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: rgb(255, 62, 62);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.tag-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.tag-list li {
+    margin: 10px 0;
+}
+
+.tag-list a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    display: inline-block;
+}
+
+.tag-list a:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.tag-list a.selected {
+    border: 3px solid #ff7db4;
+}
+
+
+/* Other styles for the comics and layout as needed */

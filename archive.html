@@ -17,6 +17,7 @@
         <div class="navbar-inner">
             <button onclick="window.location.href='./index'">Back To Home</button>
             <button onclick="window.location.href='./comics'">Comics</button>
+            <button onclick="toggleTagPopup()">Tags</button>
         </div>
     </div>
     
@@ -27,27 +28,29 @@
             <h3>These used to be the comics displayed on the featured section.</h3>
             <img class="logo" src="/images/MEARL6.png" alt="Logo">
             <section id="comics">
-                <div class="comic-section">
+                <div class="comic-section" data-tags="Funny, Drums, Music, Whiplash, Parody">
                     <h1>"PLAY THE INTRO"</h1>
                     <p>June 27th, 2024</p>
                     <img class="comic" src="/images/Comics/DRUMMER.png" alt="COMIC">
-                    <p>"Now are you a rusher, or are you a dragger or are you gonna be ON MY FUCKING TIME?"</p>
+                    <p>"Now are you a rusher, or are you a dragger or are you gonna be ON MY TIME?"</p>
+                    <h2>TAGS: Funny, Drums, Music, Whiplash, Parody</h2>
                 </div>
-                <div class="comic-section">
-                    <h1>"THATS THE WRONG LINE"</h1>
+                <div class="comic-section" data-tags="Funny, Parody, 4th Wall">
+                    <h1>"THAT'S THE WRONG LINE"</h1>
                     <p>June 24th, 2024</p>
                     <img class="comic" src="/images/Comics/WOKENUP.png" alt="COMIC">
-                    <p>That feeling when you finally gain consciousness as a toddler</p>
+                    <p>That feeling when you finally gain consciousness as a toddler.</p>
+                    <h2>TAGS: Funny, Parody, 4th Wall</h2>
                 </div>
-                <div class="comic-section">
+                <div class="comic-section" data-tags="Funny, Food, Mcdonalds">
                     <h1>"WAKE UP CALL"</h1>
                     <p>June 20th, 2024</p>
                     <img class="comic" src="/images/Comics/THESIGN.png" alt="COMIC">
                     <p>"Look, It says gullible on the ceiling!"</p>
+                    <h2>TAGS: Funny, Food, Mcdonalds</h2>
                 </div>
             </section>
         </section>
-    </div>
     </div>
     <div>
         <p>&copy; BUBLGUM 2024</p>
@@ -55,8 +58,70 @@
     <div class="navbar-bottom">
         <button onclick="scrollToRandomComic()">
             <i class="fas fa-dice"></i> RANDOMIZE
+            <script src="/scripts/randomize.js"></script>
         </button>
     </div>
-    <script src="/scripts/randomize.js"></script>
+    
+
+    <!-- Tag Popup -->
+    <div id="tagsPopup" class="tags-popup">
+        <span class="close-btn" onclick="toggleTagPopup()">&times;</span>
+        <div class="tags-popup-content">
+            <h1>SELECT A TAG</h1>
+            <ul class="tag-list">
+                <li><a href="#" onclick="toggleTag('Funny')">Funny</a></li>
+                <li><a href="#" onclick="toggleTag('Drums')">Drums</a></li>
+                <li><a href="#" onclick="toggleTag('Whiplash')">Whiplash</a></li>
+                <li><a href="#" onclick="toggleTag('Political')">Political</a></li>
+                <li><a href="#" onclick="toggleTag('Surreal')">Surreal</a></li>
+                <li><a href="#" onclick="toggleTag('Music')">Music</a></li>
+                <li><a href="#" onclick="toggleTag('Food')">Food</a></li>
+                <li><a href="#" onclick="toggleTag('Adventure')">Adventure</a></li>
+                <li><a href="#" onclick="toggleTag('Fantasy')">Fantasy</a></li>
+                <li><a href="#" onclick="toggleTag('Sci-Fi')">Sci-Fi</a></li>
+                <li><a href="#" onclick="toggleTag('Romance')">Romance</a></li>
+                <li><a href="#" onclick="toggleTag('Mystery')">Mystery</a></li>
+                <li><a href="#" onclick="toggleTag('Horror')">Horror</a></li>
+                <li><a href="#" onclick="toggleTag('Action')">Action</a></li>
+                <li><a href="#" onclick="toggleTag('Superhero')">Superhero</a></li>
+                <li><a href="#" onclick="toggleTag('Thriller')">Thriller</a></li>
+                <li><a href="#" onclick="toggleTag('Historical')">Historical</a></li>
+                <li><a href="#" onclick="toggleTag('Noir')">Noir</a></li>
+                <li><a href="#" onclick="toggleTag('Slice of Life')">Slice of Life</a></li>
+                <li><a href="#" onclick="toggleTag('Drama')">Drama</a></li>
+                <li><a href="#" onclick="toggleTag('School Life')">School Life</a></li>
+                <li><a href="#" onclick="toggleTag('Comedy')">Comedy</a></li>
+                <li><a href="#" onclick="toggleTag('Sports')">Sports</a></li>
+                <li><a href="#" onclick="toggleTag('Gaming')">Gaming</a></li>
+                <li><a href="#" onclick="toggleTag('Animals')">Animals</a></li>
+                <li><a href="#" onclick="toggleTag('Nature')">Nature</a></li>
+                <li><a href="#" onclick="toggleTag('Space')">Space</a></li>
+                <li><a href="#" onclick="toggleTag('Technology')">Technology</a></li>
+                <li><a href="#" onclick="toggleTag('Robots')">Robots</a></li>
+                <li><a href="#" onclick="toggleTag('Magic')">Magic</a></li>
+                <li><a href="#" onclick="toggleTag('Mythology')">Mythology</a></li>
+                <li><a href="#" onclick="toggleTag('Time Travel')">Time Travel</a></li>
+                <li><a href="#" onclick="toggleTag('Steampunk')">Steampunk</a></li>
+                <li><a href="#" onclick="toggleTag('Cyberpunk')">Cyberpunk</a></li>
+                <li><a href="#" onclick="toggleTag('Post-Apocalyptic')">Post-Apocalyptic</a></li>
+                <li><a href="#" onclick="toggleTag('Detective')">Detective</a></li>
+                <li><a href="#" onclick="toggleTag('Aliens')">Aliens</a></li>
+                <li><a href="#" onclick="toggleTag('Zombies')">Zombies</a></li>
+                <li><a href="#" onclick="toggleTag('Vampires')">Vampires</a></li>
+                <li><a href="#" onclick="toggleTag('Werewolves')">Werewolves</a></li>
+                <li><a href="#" onclick="toggleTag('Pirates')">Pirates</a></li>
+                <li><a href="#" onclick="toggleTag('Ninjas')">Ninjas</a></li>
+                <li><a href="#" onclick="toggleTag('Martial Arts')">Martial Arts</a></li>
+                <li><a href="#" onclick="toggleTag('Ghosts')">Ghosts</a></li>
+                <li><a href="#" onclick="toggleTag('Crossovers')">Crossovers</a></li>
+                <li><a href="#" onclick="toggleTag('Parody')">Parody</a></li>
+                <li><a href="#" onclick="toggleTag('Mcdonalds')">Mcdonalds</a></li>
+                <li><a href="#" onclick="toggleTag('4th Wall')">4th Wall</a></li>
+
+            </ul>
+        </div>
+    </div>
+
+    <script src="/scripts/filter.js"></script>
 </body>
 </html>
