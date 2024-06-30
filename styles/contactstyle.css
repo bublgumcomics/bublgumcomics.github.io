@@ -37,10 +37,9 @@ body {
 }
 
 .logo {
-    width: 25%;
+    width: 40%;
     height: auto;
     margin-bottom: 20px;
-    margin-top: 50px;
 }
 
 .navbar {
@@ -48,7 +47,7 @@ body {
     top: 0;
     width: 100%;
     overflow-x: auto; /* Allows horizontal scrolling */
-    z-index: 1;
+    z-index: 0;
     background-color: rgba(255, 255, 255, 0.8);
     display: flex;
     justify-content: center;
@@ -56,9 +55,30 @@ body {
 
 .navbar-inner {
     display: flex;
-    justify-content: center;
-    padding: 10px;
-    width: max-content; /* Ensure the content width expands to fit the buttons */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Added padding to ensure the inner content is not touching the sides */
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.navbar-logo .logo {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+    margin-bottom: 5px; /* Added margin-bottom to prevent touching the top */
+}
+
+.navbar-logo .logo-text {
+    font-family: "Fredoka", sans-serif;
+    font-size: 30px;
+    font-weight: bold; /* Made the text bold */
+    color: #fff;
+    text-shadow: -2px -2px 0 #ff7db4, 2px -2px 0 #ff7db4, -2px 2px 0 #ff7db4, 2px 2px 0 #ff7db4;
 }
 
 .navbar button {
@@ -80,7 +100,7 @@ body {
 
 .navbar button:hover {
     box-shadow: 6px 6px 6px rgba(36, 36, 36, 0.6);
-    background-color: #000;
+    background-color: #ff7db4;
     color: #fff;
 }
 
