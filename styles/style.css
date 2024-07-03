@@ -237,3 +237,33 @@ button:hover {
     flex-direction: column;
     align-items: center;
 }
+
+.comic-section {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    color: black;
+    margin: 20px auto;
+    width: 90%;
+}
+
+.content2 {
+    display: flex;
+    justify-content: center; /* Center align horizontally */
+    align-items: center; /* Center align vertically */
+    flex-wrap: wrap; /* Allow content to wrap if needed */
+    padding: 20px;
+    margin-top: 40px;
+    max-width: 800px;
+    max-height: 800px;
+    width: 100%; /* Ensure full width responsiveness */
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    box-shadow: 0 0px 20px #000;
+}
+
+.comic {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}

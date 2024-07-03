@@ -149,6 +149,7 @@ body {
 }
 
 .youtube { background-color: #CC181E; }
+.reddit { background-color: #FF5700; }
 .instagram {
     background: rgb(249,206,52);
     background: linear-gradient(142deg, rgba(249,206,52,1) 0%, rgba(238,42,123,1) 44%, rgba(98,40,215,1) 100%);
