@@ -24,65 +24,17 @@
 
     <div class="background"></div>
 
-    <div class="threejs-container">
-        <div id="threejs-canvas"></div>
-    </div>
+    <img class="logo2" src="/images/MEARL.png" alt="Logo">
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
     <script src="scripts/timer.js"></script>
-    <script>
-        // Basic Three.js setup
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(75, 250 / 250, 0.1, 1000);
-        const renderer = new THREE.WebGLRenderer({ alpha: true });
-        renderer.setSize(500, 500);
-        document.getElementById('threejs-canvas').appendChild(renderer.domElement);
-
-        // Add ambient light to the scene with a specific color
-        const ambientLight = new THREE.AmbientLight(0xffffff, 1); // Adjust color (white) and intensity (0.5)
-        scene.add(ambientLight);
-
-        // Add directional light to cast shadows
-        const light = new THREE.DirectionalLight(0xff7db4, 1);
-        light.position.set(0, 0, 1).normalize();
-        light.castShadow = false;
-        scene.add(light);
-
-        let model;
-
-        // Load the 3D model
-        const loader = new THREE.GLTFLoader();
-        loader.load('models/bublgumlogo3d.glb', function(gltf) {
-            model = gltf.scene;
-            model.castShadow = true; // Enable shadow casting for the model
-            model.receiveShadow = false; // Enable shadow receiving for the model
-            scene.add(model);
-        }, undefined, function(error) {
-            console.error(error);
-        });
-
-        // Set camera position
-        camera.position.z = 8;
-
-        // Animation loop
-        function animate() {
-            requestAnimationFrame(animate);
-
-            // Rotate the model
-            if (model) {
-                model.rotation.y += 0.01;
-            }
-
-            renderer.render(scene, camera);
-        }
-        animate();
-    </script>
     
     <div class="overlay">
+        <h1>New comic in:</h1>
         <div class="content">
             <div class="column timer-column">
-                <h1>3 NEW COMICS. 3 OUT OF 3 IN:</h1>
                 <div class="countdown" id="countdown">
                     <div class="countdown-element">
                         <div class="time" id="days"></div>
@@ -101,27 +53,45 @@
                         <div class="label">Seconds</div>
                     </div>
                 </div>
-                <p>check out some other cool stuff for now:</p>
             </div>
-        </div>
 
-        <div class="content">
             <section id="current-comic">
-                <h1>MOST RECENT COMIC</h1>
-                <h3>"PERSPECTIVE"</h3>
-                <h5>July 17th, 2024</h5>
                 <section id="comics">
                     <div class="comic-section">
-                        <img class="comic" src="images/Comics/NEWPERSPECTIVE.png" alt="FEATURED COMIC">
+                        <h1>MOST RECENT COMIC</h1>
+                        <h3>"MEOW-CHOW"</h3>
+                        <h5>July 17th, 2024</h5>
+                        <img class="comic" src="images/Comics/MEOWCHOW.png" alt="FEATURED COMIC">
+                        <p>"I didn't know you have a cat!"</p>
                     </div>
                 </section>
-                <p>When you start thinking in the third dimension:</p>
             </section>
         </div>
+
+        <div class="carousel-container">
+            <button class="nav-button" id="prev-button">&#8592;</button>
+            <div class="carousel-wrapper">
+                <div class="carousel">
+                    <img src="images/Comics/NEWPERSPECTIVE.png" alt="Image 1" class="carousel-image">
+                    <img src="images/Comics/WOKENUP.png" alt="Image 2" class="carousel-image">
+                    <img src="images/Comics/GLASSCEILING.png" alt="Image 3" class="carousel-image">
+                    <img src="images/Comics/KNOWITALL.png" alt="Image 4" class="carousel-image">
+                    <img src="images/Comics/THESIGN.png" alt="Image 5" class="carousel-image">
+                </div>
+            </div>
+            <button class="nav-button" id="next-button">&#8594;</button>
+        </div>
+        <script src="scripts/carousel.js"></script>
 
         <div>
             <button onclick="window.location.href='comics.html'">Comics</button>
         </div>
     </div>
+
+    <div class="threejs-container">
+        <div id="threejs-canvas"></div>
+    </div>
+    <script src="scripts/rotating.js"></script>
+
 </body>
 </html>
